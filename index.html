@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cờ Tỷ Phú - Vietnamese Monopoly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      body {
+        background-image: url('https://images.unsplash.com/photo-1545972154-53c8421c40f2?q=80&w=1974&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 1;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(17, 24, 39, 0.9); /* equivalent to bg-gray-900 with opacity */
+        z-index: -1;
+      }
+      @keyframes jiggle-1 {
+        0%, 100% { transform: translate(0, 0) rotate(0); }
+        25% { transform: translate(2px, -2px) rotate(3deg) scale(1.1); }
+        50% { transform: translate(-2px, 2px) rotate(-3deg) scale(1.1); }
+        75% { transform: translate(1px, -1px) rotate(2deg) scale(1.1); }
+      }
+      @keyframes jiggle-2 {
+        0%, 100% { transform: translate(0, 0) rotate(0); }
+        25% { transform: translate(-2px, -2px) rotate(-3deg) scale(1.1); }
+        50% { transform: translate(2px, 2px) rotate(3deg) scale(1.1); }
+        75% { transform: translate(-1px, -1px) rotate(-2deg) scale(1.1); }
+      }
+      .animate-jiggle-1 { animation: jiggle-1 0.15s linear infinite; }
+      .animate-jiggle-2 { animation: jiggle-2 0.15s linear infinite; }
+      .mute-button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(31, 41, 55, 0.8);
+        color: white;
+        border: 1px solid rgba(75, 85, 99, 0.8);
+        backdrop-filter: blur(4px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="text-white">
+    <div id="root"></div>
+    <audio id="dice-roll-sound" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_122255.mp3" preload="auto"></audio>
+    <audio id="buy-property-sound" src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c9a8f94d23.mp3" preload="auto"></audio>
+    <audio id="draw-card-sound" src="https://cdn.pixabay.com/download/audio/2022/03/08/audio_98522622a5.mp3" preload="auto"></audio>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

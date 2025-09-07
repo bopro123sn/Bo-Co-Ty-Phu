@@ -1,0 +1,5 @@
+{
+  "name": "Cờ Tỷ Phú - Vietnamese Monopoly",
+  "description": "A web-based board game inspired by 'Cờ Tỷ Phú' (Vietnamese Monopoly) for 2-4 players. Players roll dice, move around the board, buy properties, and collect rent. The goal is to be the last player with money. This version features human vs. human gameplay with a classic board layout.",
+  "requestFramePermissions": []
+}
